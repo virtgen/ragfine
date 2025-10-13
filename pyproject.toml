@@ -12,7 +12,7 @@ python = "^3.8"
 matplotlib = "^3.5"
 
 [project.urls]
-"Documentation" = "https://opptimizer.readthedocs.io/"
+"Documentation" = "https://ragfine.readthedocs.io/"
 "Source" = "https://github.com/incubeai/ragfine.git"
 "Bug Tracker" = "https://github.com/incubeai/ragfine.git/issues"
 
