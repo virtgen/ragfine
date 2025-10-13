@@ -1,4 +1,4 @@
-# Opptimizer
+# .ragfine
 
 Welcome to the .ragfine documentation!
 
