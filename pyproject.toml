@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ragifine"
+version = "1.0.0"
+description = "Framework that helps you build, evaluate, and refine RAG component in generative AI pipelines with surgical precision."
+authors = ["Artur Bąk <virtgen@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/incubeai/ragfine.git"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+matplotlib = "^3.5"
+
+[project.urls]
+"Documentation" = "https://opptimizer.readthedocs.io/"
+"Source" = "https://github.com/incubeai/ragfine.git"
+"Bug Tracker" = "https://github.com/incubeai/ragfine.git/issues"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
