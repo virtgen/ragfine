@@ -1,30 +1,13 @@
 site_name: .ragfine documentation
 nav:
   - Home: index.md
-  - Get started: README_link.md
-  - Pipeline's execution:
-    - Execution Modes: exec-modes.md
-    - Results from execution: results.md
-    - Execution parameters: exec-params.md
-    - Directories management: dirs-management.md
-  - Advanced Topics:
-    - Context Management: context-management.md
-    - Local installation: advanced-installation.md
-  - API Reference: 
-    - Classes and methods: reference.md
-  - Other:
-    - GitHub: https://github.com/incubeai/ragfine.git
-    - PyPI: https://pypi.org/project/ragfine/
-    - Contributing: contributing.md
-    - FAQs: faq.md
-    - Release Notes: release-notes.md
 theme:
   name: readthedocs
-plugins:
-  - search
-  - mkdocstrings:
-      handlers:
-        python:
-          show_source: false
-          # You can customize options here, like:
-          docstring_style: google  # Optional, use "numpy", "google", or "sphinx"
+# plugins:
+#   - search
+#    mkdocstrings:
+#       handlers:
+#         python:
+#           show_source: false
+#           # You can customize options here, like:
+#           docstring_style: google  # Optional, use "numpy", "google", or "sphinx"
