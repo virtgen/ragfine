@@ -1,0 +1,23 @@
+defaults:
+  meta: true
+
+steps:
+  - use: branch_async
+    name: AsyncClassifier
+    predicate: is_text
+    then_steps: [Entifier, Questor, Solver]
+    else_steps: [Solver]
+
+  - use: fan_async
+    name: AsyncSplitMerge
+    items_fn: paragraphs
+    sub_steps: [Entifier, Questor, Solver, Integrator, Refiner]
+    item_concurrency: 4
+    per_item_timeout: 5.0
+
+  - use: Rebaser
+
+# If you prefer the type: flavor (as in your builder), use:
+# - type: branch_async
+#   name: AsyncClassifier
+#   ...

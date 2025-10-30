@@ -1,21 +1,58 @@
 [tool.poetry]
-name = "ragifine"
-version = "1.0.0"
-description = "Framework that helps you build, evaluate, and refine RAG component in generative AI pipelines with surgical precision."
+name = "ragfine"
+version = "1.0.3"
+description = "Framework that helps you build, evaluate, and refine GenAI pipelines."
 authors = ["Artur Bąk <virtgen@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
-homepage = "https://github.com/incubeai/ragfine.git"
+homepage = "https://github.com/incubeai/ragfine"
+repository = "https://github.com/incubeai/ragfine"
+documentation = "https://ragfine.readthedocs.io/"
+keywords = ["RAG", "LLM", "AI", "pipeline", "async", "evaluation"]
+
+# Source layout: nested package (ragfine/ragfine/)
+packages = [
+    { include = "ragfine" },
+]
+
+# Optional files included in the built wheel/sdist
+include = [
+    "ragfine/specs/**/*.yaml",
+    "ragfine/docs/**/*",
+    "tests/**/*",
+]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-matplotlib = "^3.5"
+python = "^3.9"
+pyyaml = "^6.0"
+#matplotlib = "^3.5"
+
+# Optional dependencies for building docs or extras
+mkdocs = { version = "^1.5", optional = true }
+mkdocs-material = { version = "^9.5", optional = true }
+
+# CLI entry point (optional)
+[tool.poetry.scripts]
+ragfine = "ragfine.cli.run:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pytest-asyncio = "^0.23"
+pytest-cov = "^4.1"
+black = "^24.0"
+isort = "^5.13"
+mypy = "^1.10"
+ruff = "^0.5"
 
 [project.urls]
-"Documentation" = "https://ragfine.readthedocs.io/"
-"Source" = "https://github.com/incubeai/ragfine.git"
-"Bug Tracker" = "https://github.com/incubeai/ragfine.git/issues"
+Documentation = "https://ragfine.readthedocs.io/"
+Source = "https://github.com/incubeai/ragfine"
+"Issue Tracker" = "https://github.com/incubeai/ragfine/issues"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+# Optional: hatch-compatible wheel target (no harm if unused)
+[tool.hatch.build.targets.wheel]
+packages = ["ragfine"]

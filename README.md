@@ -23,3 +23,15 @@ It automatically analyzes retrieval quality, semantic coherence, prompt strategy
 ```bash
 pip install ragfine
 ragfine analyze --config config.yaml
+
+## Local Tests
+```bash
+poetry install --with dev
+
+make install        # install dev deps via Poetry
+make test           # run all tests
+make coverage       # with coverage report
+make lint           # static checks
+make format         # format code (black + isort)
+make clean          # remove caches
+

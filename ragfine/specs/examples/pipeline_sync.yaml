@@ -1,0 +1,17 @@
+defaults:
+  meta: true
+
+steps:
+  - use: branch
+    name: Classifier
+    predicate: is_text
+    then_steps: [Entifier, Questor, Solver]
+    else_steps: [Solver]
+
+  - use: fan
+    name: SplitMerge
+    items_fn: paragraphs
+    sub_steps: [Entifier, Questor, Solver, Integrator, Refiner]
+    isolate_parent: true
+
+  - use: Rebaser
