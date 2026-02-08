@@ -6,7 +6,7 @@ Framework that helps you **build, evaluate, and refine** RAG component in genera
 
 ## 🧠 What is .ragfine?
 
-.ragfine is a modular framework that helps you **build, evaluate, and refine** RAG component.  
+.ragfine is a modular framework that helps you **build, evaluate, and refine** RAG component or other AI pipelines.  
 It automatically analyzes retrieval quality, semantic coherence, prompt strategy, and response alignment — helping your AI reason more clearly.
 
 ---
